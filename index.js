@@ -26,9 +26,14 @@ console.log(asset);
 console.log(asset2);
 assertEqual(Asset.find(1).name, "same, same");*/
 
-
-var asset = Asset.init();
-asset.save();
-console.log(asset.id);
+// Asset的实例方法init
+// var asset = Asset.init();
+// asset.save();
+// console.log(asset.id);
 // asset2.destroy();
 /**/
+
+// 生成新的实例
+var asset = Asset.init({name: "foo"});
+asset.save();
+console.log(asset);
